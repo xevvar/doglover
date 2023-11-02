@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const dogName = document.getElementById('dog-name');
     const dogImage = document.getElementById('dog-image');
     const searchDog = document.getElementById('search-dog');
+    const submitBtn = document.getElementById('submitBtn');
+    
 
 
     var myHeaders = new Headers();
@@ -15,7 +17,7 @@ var requestOptions = {
   headers: myHeaders,
   redirect: 'follow'
 };
-var link = baseURL + "v1/images/search?format=json&limit=100" 
+var link = baseURL + "v1/images/search?format=json&limit=50" 
 
 fetch(link, requestOptions)
   .then(response => response.text())
@@ -38,71 +40,27 @@ fetch(link, requestOptions)
 
         
 
-        // li.addEventListener('click', function(){
-        //     beerName.textContent = beer.name;
-        //     beerImage.src = beer.image_url;
-        //     beerImage.alt = beer.name;
-        //     beerDescription.textContent = beer.description;
-        //     reviewList.innerHTML = '';
-        //     beer.reviews.forEach((review) => {
-        //         const reviewLi = document.createElement('li');
-        //         reviewLi.textContent = review;
+        
 
-        //         reviewList.appendChild(reviewLi);
-        //     })
-
-    
-        // });
-
-        // beerList.appendChild(li);
+        
     })
+    console.log(submitBtn.innerHTML);
+    submitBtn.addEventListener('click', function(){
+        dogName.textContent = searchDog.value;
+                //     beerImage.src = beer.image_url;
+    //     beerImage.alt = beer.name;
+    //     beerDescription.textContent = beer.description;
+    //     reviewList.innerHTML = '';
+    //     beer.reviews.forEach((review) => {
+    //         const reviewLi = document.createElement('li');
+    //         reviewLi.textContent = review;
 
-})
-  .catch(error => console.log('error', error));
-
-
-
-
-    // fetch(`${baseURL}, {headers: {
-    //     'x-api-key': `${api_key}`
-    //   }}`)
-    // .then((response) => response.text);
-    // .then(())
-
-//     var myHeaders = new Headers();
-// myHeaders.append("Content-Type", "application/json");
-// myHeaders.append("x-api-key", "{{YOUR-API-KEY}}");
-
-// var requestOptions = {
-//   method: 'GET',
-//   headers: myHeaders,
-//   redirect: 'follow'
+    //         reviewList.appendChild(reviewLi);
+    //     })
 
 
+     });
 
-
-function retrieve(path, id) {
-    const endpoint = path;
-    if (id !== undefined) {
-        endpoint = `${path}/${id}`;
-    }
-    return fetch(`${baseURL}${endpoint}`, {
-        headers: {
-            "Content-Type": "appication/json"
-        }
-    }).then(response => {
-        if (response.status == 200) return response.json();
-        // throw new Error(response.statusText);
-    }).then(result => console.log(result));
-
-}
+}).catch(error => console.log('error', error));
 
 });
-
-
-
-
-
-
-
-
