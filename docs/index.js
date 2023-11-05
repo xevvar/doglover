@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var dog = {};
         dog.image = main.url;
         breeds.forEach((breed) => {
-          console.log(breed.name);
+          // console.log(breed.name);
           if (populatedNames.includes(breed.name)) {
 
           } else {
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dog.breedFor = breed.bred_for;
             
 
-            console.log(breed.url);
+            
             dog.temperament = breed.temperament;
             dog.life_span = breed.life_span;
             dog.breedGroup = breed.breed_group;
@@ -65,15 +65,22 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
         })
+        dogName.textContent = populatedData[0].name;
+        dogImage.src = populatedData[0].image;
+        dogImage.alt = populatedData[0].name;
+        breedGroup.textContent = populatedData[0].breedGroup;
+        breedFor.textContent = populatedData[0].breedFor;
+        temperament.textContent = populatedData[0].temperament;
+        lifespan.textContent = populatedData[0].life_span;
+
       })
       
       submitBtn.addEventListener('click', function () {
         dogName.textContent = populatedData[searchDog.value].name;
-        console.log(populatedData[searchDog.value].image);
         dogImage.src = populatedData[searchDog.value].image;
         dogImage.alt = populatedData[searchDog.value].name;
-        breedGroup.textContent = populatedData[searchDog.value].breed_group;
-        breedFor.textContent = populatedData[searchDog.value].bred_for;
+        breedGroup.textContent = populatedData[searchDog.value].breedGroup;
+        breedFor.textContent = populatedData[searchDog.value].breedFor;
         temperament.textContent = populatedData[searchDog.value].temperament;
         lifespan.textContent = populatedData[searchDog.value].life_span;
 
@@ -117,14 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //     })
 
       });
-
-      // reviewList.innerHTML = '';
-      // const reviewLi = document.createElement('li');
-      // reviewLi.textContent = review;
-      // reviewList.appendChild(reviewLi);
-
-
-
+      
     }).catch(error => console.log('error', error));
 
   reviewForm.addEventListener('submit', function (event) {

@@ -11,20 +11,66 @@
 
 <body>
     <section id="landing">
-    <h2>DOG LOVER</h2>
-    <h3>
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="#">DOG LOVER</a>
+                <div>
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#landing">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#explore-dog">Explore Dog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#review">Reviews</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="home-details">
+                <p>For the Love of Paws</p>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!--
+    <section id="landing">
         <nav>
+
             <ul id="navigation-bar">
+                <div>
+                    <li>DOG LOVER</li>
+                </div>
+                <div>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#Explore dog">Explore dog</a></li>
+            </div>
             </ul>
         </nav>
-    </h3>
-    <h3 id="Home">Home</h3>
-    <p>For the Love of Paws</p>
+        <h3 id="Home">Home</h3>
+        <p>For the Love of Paws</p>
+
+        <p>Discover new details about our furry friends that you may never have known.<br><br>
+            We give an insight on information about dogs that may be unknown to most owners and dog lovers such as
+            their:
+        <ul>
+            <li>breed-group</li>
+            <li>temperament</li>
+            <li>lifespan</li>
+            <li>what they are bred-for</li>
+        </ul>
+        </p>
+    </section>
+-->
+    <h3 id="explore-dog">Explore dog</h3>
 
     <p>Discover new details about our furry friends that you may never have known.<br><br>
-        We give an insight on information about dogs that may be unknown to most owners and dog lovers such as their:
+        We give an insight on information about dogs that may be unknown to most owners and dog lovers such
+        as
+        their:
     <ul>
         <li>breed-group</li>
         <li>temperament</li>
@@ -32,9 +78,6 @@
         <li>what they are bred-for</li>
     </ul>
     </p>
-    </section>
-
-    <h3 id="Explore-dog">Explore dog</h3>
 
     <label for="search-dog">Choose dog name</label><br>
     <select name="search-dog" id="search-dog">
@@ -43,24 +86,27 @@
     <input type="button" id="submitBtn" value="Submit">
 
     <div class="dog details">
-        <h4 id="dog-name">Dog name goes here</h4>
-        <img 
-        id="dog-image"
-        alt="Dog name goes here"
-        src=""
-        />
-        <p>
-        <div id="breed-group">Dog breed-group goes here</div>
-        <div id="breed-for">What the dog is breed-for goes here</div>
-        <div id="temperament">Dog's temperament</div>
-        <div id="lifespan">Dog's lifespan</div>
-        </p>
+        <h4 id="dog-name">Alaskan</h4>
+        <div class="col">
+            <img id="dog-image" alt="Dog name goes here" src="" />
+        </div>
+        <div class="col">
+            
+            <h4>Breed Group</h4>
+            <div id="breed-group">Dog breed-group goes here</div>
+            <h4>Bred For</h4>
+            <div id="breed-for">What the dog is breed-for goes here</div>
+            <h4>Temperament</h4>
+            <div id="temperament">Dog's temperament</div>
+            <h4>Lifespan</h4>
+            <div id="lifespan">Dog's lifespan</div>
+        </div>
     </div>
 
     <div id="reviews">
         <h4>Dog Review</h4>
         <ul id="review-list">
-            <li>reviews goes here</li>
+
 
         </ul>
 
@@ -68,14 +114,14 @@
 
         <form id="review-form">
             <label for="review">your review</label><br>
-            <textarea id="review" ></textarea>
-            <button type="submit">Add review</button>
+            <textarea id="review"></textarea>
+            <button id="btn" type="submit">Add review</button>
 
         </form>
-    </p>
+        </p>
 
     </div>
-    
+
 </body>
 
 </html>
