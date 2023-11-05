@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const submitBtn = document.getElementById('submitBtn');
   const reviewList = document.getElementById('review-list');
   const reviewForm = document.getElementById('review-form');
-  const btn = document.getElementById('btn');
   const breedGroup = document.getElementById('breed-group');
   const breedFor = document.getElementById('breed-for');
   const temperament = document.getElementById('temperament');
@@ -38,15 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
       searchDog.innerHTML = '';
       resultParsed.forEach((main) => {
         const breeds = main.breeds;
+        var dog = {};
+        dog.image = main.url;
         breeds.forEach((breed) => {
           console.log(breed.name);
           if (populatedNames.includes(breed.name)) {
 
           } else {
 
-            var dog = {};
+          
             dog.name = breed.name;
             dog.breedFor = breed.bred_for;
+            
+
+            console.log(breed.url);
             dog.temperament = breed.temperament;
             dog.life_span = breed.life_span;
             dog.breedGroup = breed.breed_group;
@@ -57,15 +61,26 @@ document.addEventListener("DOMContentLoaded", function () {
             opt.textContent = breed.name;
             opt.value = populatedData.length - 1;
             searchDog.appendChild(opt);
-
             populatedNames.push(breed.name);
           }
 
         })
       })
-      console.log(submitBtn.innerHTML);
+      
       submitBtn.addEventListener('click', function () {
-        dogName.textContent = searchDog.value;
+        dogName.textContent = populatedData[searchDog.value].name;
+        console.log(populatedData[searchDog.value].image);
+        dogImage.src = populatedData[searchDog.value].image;
+        dogImage.alt = populatedData[searchDog.value].name;
+        breedGroup.textContent = populatedData[searchDog.value].breed_group;
+        breedFor.textContent = populatedData[searchDog.value].bred_for;
+        temperament.textContent = populatedData[searchDog.value].temperament;
+        lifespan.textContent = populatedData[searchDog.value].life_span;
+
+
+
+
+/*
         fetch(link, requestOptions)
           .then(response => response.text())
           .then((result) => {
@@ -89,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
               })
             })
           })
+          */
 
         //     beerImage.src = beer.image_url;
         //     beerImage.alt = beer.name;
