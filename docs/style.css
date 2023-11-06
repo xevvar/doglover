@@ -24,6 +24,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  border-radius: 5px;
 }
 
 .navbar-main {
@@ -83,6 +84,7 @@ span {
 }
 #home-details2 {
   margin-top: 80px;
+  font-weight: bold;
   font-size: 20px;
   color: white;
 
@@ -135,6 +137,7 @@ label[for="search-dog"] {
 }
 
 #dog-image {
+  margin-left: 10px;
   max-width: 300px;
   height: auto;
   margin-right: 20px;
@@ -143,14 +146,17 @@ label[for="search-dog"] {
 
 .col {
   flex: 1;
+
+}
+#breed-group {
+  margin-bottom: 5px;
 }
 
 #review-list {
-  list-style: none;
+  list-style:inside circle;
   margin-top: 20px;
   background-color: #d9d9d9;
   max-width: 500px;
-  margin: 1rem ;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
@@ -168,7 +174,7 @@ label[for="search-dog"] {
   border: 1px solid #333;
   margin-bottom: 10px;
   border-radius: 5px;
-  max-width: 800px;
+  max-width: 500px;
 }
 
 #btn {
