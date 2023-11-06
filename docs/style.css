@@ -148,9 +148,6 @@ label[for="search-dog"] {
   flex: 1;
 
 }
-#breed-group {
-  margin-bottom: 5px;
-}
 
 #review-list {
   list-style:inside circle;
