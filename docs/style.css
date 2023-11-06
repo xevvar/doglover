@@ -1,10 +1,16 @@
-body{
+/* body{
     background-color:#8d6a40;
     font-family: "Poppins", sans-serif;
     margin: 0;
-    /* text-align: center; */
+    text-align: center;
     
 
+}
+.container {
+  background-color: #a1938c;
+  width: auto;
+  height: auto;
+  
 }
 
 #landing {
@@ -59,7 +65,7 @@ nav li{
 }
 nav a{
     text-decoration: none;
-    /* background-color: #446588; */
+    background-color: #446588;
     color: blue;
     border-radius: 5px;
 }
@@ -113,68 +119,160 @@ form button[type="submit"] {
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
+} */
+
+* {
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
 }
-/*
-.navbar-expand-lg {
-  box-shadow: none;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #7b7b7b;
+  color: black;
+  margin: 0;
 }
-.navbar a {
-  color: #fff;
-}
-.fa-bars {
-  color: #fff;
-  font-size: 20px;
-}
-.navbar-nav .nav-item .nav-link:hover {
-  color: #c8c4bc;
-}
-.navbar-brand {
-  font-size: 3rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
-}
-.navbar-brand:hover {
-  color: #c8c4bc;
-}
-.nav-item {
-  padding: 0 18px;
-}
-h1 {
-  font-family: "Poppins", sans-serif;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
-h3 {
-  font-family: "Raleway", sans-serif;
-}
-/* about us */
 
-/* .about-us-description {
-  margin: auto;
-  line-height: 2rem;
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
-.about-us img {
-  border-radius: 1.25rem;
-  width: 100%;
+
+.navbar-brand {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: gray;
+}
+
+#landing {
+  background-image: url(assets/landingimage.jpg);
+  height: 700px;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  font-family: "Poppins", sans-serif;
   object-fit: cover;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
 }
 
-.about-us {
-  background-color: #eff2f6;
-}
-.about-us .image-seven {
-  height: 356px;
-  margin-top: 200px;
-}
-.about-us .image-eight {
-  height: 556px;
-}
-.about-us .image-nine {
-  height: 400px;
-  margin: 80px 0;
+#home-details {
+  font-size: 24px;
 }
 
-.about-us img:hover {
-  animation: bounce 2s infinite;
-}  */
+/* Style the headings */
+h2 {
+  font-size: 28px;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Style the text content */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Style the select dropdown and button */
+label[for="search-dog"] {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#search-dog {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #333;
+}
+
+#submitBtn {
+  background-color: #ff4500;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Style the dog details section */
+.dog {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#dog-image {
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+  border: 1px solid #333;
+}
+
+.col {
+  flex: 1;
+}
+
+/* Style the review section */
+#review-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+/* Style the review form */
+#review-form {
+  margin-top: 20px;
+}
+
+#review {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+}
+
+#btn {
+  background-color: #ff4500;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
