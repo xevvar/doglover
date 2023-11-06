@@ -101,9 +101,11 @@ label[for="search-dog"] {
 }
 
 #search-dog {
+  background-color: #d9d9d9;
   width: 200px;
   padding: 5px;
   border: 1px solid #333;
+  border-radius: 5px;
 }
 
 #submitBtn {
