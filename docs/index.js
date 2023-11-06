@@ -45,12 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
           } else {
 
-          
+
             dog.name = breed.name;
             dog.breedFor = breed.bred_for;
-            
-
-            
             dog.temperament = breed.temperament;
             dog.life_span = breed.life_span;
             dog.breedGroup = breed.breed_group;
@@ -74,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         lifespan.textContent = populatedData[0].life_span;
 
       })
-      
+
       submitBtn.addEventListener('click', function () {
         dogName.textContent = populatedData[searchDog.value].name;
         dogImage.src = populatedData[searchDog.value].image;
@@ -85,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         lifespan.textContent = populatedData[searchDog.value].life_span;
 
       });
-      
+
     }).catch(error => console.log('error', error));
 
   reviewForm.addEventListener('submit', function (event) {
