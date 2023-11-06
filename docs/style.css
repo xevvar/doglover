@@ -110,11 +110,12 @@ label[for="search-dog"] {
 
 #submitBtn {
   background-color: aqua;
-  color: #fff;
+  color: black;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   margin-top: 10px;
+  border-radius: 5px;
 }
 
 .dog {
@@ -162,8 +163,10 @@ label[for="search-dog"] {
 
 #btn {
   background-color: aqua;
-  color: #fff;
+  color: black;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+
 }
