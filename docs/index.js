@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       searchDog.innerHTML = '';
       resultParsed.forEach((main) => {
         const breeds = main.breeds;
-        var dog = {};
+        const dog = {};
         dog.image = main.url;
         breeds.forEach((breed) => {
           // console.log(breed.name);
@@ -61,7 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
             populatedNames.push(breed.name);
           }
 
-        })
+        }) 
+        
+        //populate data of first dog in the generated dropdown
         dogName.textContent = populatedData[0].name;
         dogImage.src = populatedData[0].image;
         dogImage.alt = populatedData[0].name;
