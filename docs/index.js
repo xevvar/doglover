@@ -84,45 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
         temperament.textContent = populatedData[searchDog.value].temperament;
         lifespan.textContent = populatedData[searchDog.value].life_span;
 
-
-
-
-/*
-        fetch(link, requestOptions)
-          .then(response => response.text())
-          .then((result) => {
-            const resultParsed = JSON.parse(result);
-            breedGroup.innerHTML = '';
-            breedFor.innerHTML = '';
-            lifespan.innerHTML = '';
-            temperament.innerHTML = '';
-            resultParsed.forEach((main) => {
-              const breeds = main.breeds;
-
-              breeds.forEach((breed) => {
-                if (breed.name == searchDog.value) {
-                  dogImage.src = breed.url;
-                  dogImage.alt = breed.name;
-                  breedGroup.textContent = breed.breed_group;
-                  breedFor.textContent = breed.bred_for;
-                  temperament.textContent = breed.temperament;
-                  lifespan.textContent = breed.life_span;
-                }
-              })
-            })
-          })
-          */
-
-        //     beerImage.src = beer.image_url;
-        //     beerImage.alt = beer.name;
-        //     beerDescription.textContent = beer.description;
-
-        //     beer.reviews.forEach((review) => {
-        //         
-
-        //         
-        //     })
-
       });
       
     }).catch(error => console.log('error', error));
@@ -137,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     reviewItem.innerHTML = `${review}`;
 
     reviewList.appendChild(reviewItem);
+    reviewList.style.display = 'block';
 
     reviewForm.reset();
 
